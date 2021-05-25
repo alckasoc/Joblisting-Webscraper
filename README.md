@@ -1,4 +1,4 @@
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/banner_final.PNG?raw=true)
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/banner.PNG?raw=true)
 
 [![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-F3f0f0?&logo=Jupyter&labelColor=F3f0f0)](https://jupyter.org/try)
 [![Python](https://img.shields.io/badge/Python-3.8.3-21455f?logo=python&labelColor=21455f)](https://www.python.org/)
