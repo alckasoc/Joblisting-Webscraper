@@ -27,7 +27,9 @@ This project allows for configuring joblisting filters and webscraping joblistin
 - Additional Notes
 - References
 - Author Info
+- Future Notice
 - Credits
+- Thank you!
 
 ## Motivation
 
@@ -186,7 +188,15 @@ Gmail: tuvincent0106@gmail.com (preferably) or alckasoc@gmail.com
 Linkedin (I have not configured my Linkedin profile yet!): [Vincent Tu](https://www.linkedin.com/in/vincent-tu-422b18208/)
 Discord: [alckasoc#5261](https://discordapp.com/users/251152357063131138/)
 
+## Future Notice
+
+As of now, this project works. However, as joblistings are constantly updated, and consequently Glassdoor.com's joblistings and jobpage will consistently update (also general website updates), there may be a time where this project may not work as intended. I never expected this project to reach this size. With more documentation, docstrings, comments, and functions, I found the project's line of code size growing rapidly. Downloading this project is definitely a hassle as it is not a PyPI package. However, my choice to not make it a PyPI package is because I do not plan on maintaining this project with the oncoming future updates to Glassdoor.com. However, regardless of where this project stands, I can say that it has been a priceless journey. I've learned a wealth of material and topics not to mention the joy I've experienced in seeing my huge block of code run without errors. 
+
 ## Credits
 
 This project was made with inspiration from:
 https://github.com/arapfaik/scraping-glassdoor-selenium
+
+## Thank you!
+
+It has certainly been a grueling rollercoaster of coding and debugging, but seeing my clunky code run while learning topics I've previously never heard of before is unmistakably a hallmark of this project and any project! Hills and valleys are inevitable and I definitely learned that climbing out of the valleys is what makes the journey so enjoyable. Thank you for viewing my project.
