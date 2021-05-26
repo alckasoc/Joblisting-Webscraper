@@ -12,7 +12,7 @@
 This project allows for configuring joblisting filters and webscraping joblisting data from Glassdoor.com.
 
 ## Table of Contents:
-- Motivation
+- ![Motivation](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#motivation)
 - Technologies
 - Requirements for Use
 - Tutorial
