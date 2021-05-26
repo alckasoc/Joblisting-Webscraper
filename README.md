@@ -16,20 +16,18 @@ This project allows for configuring joblisting filters and webscraping joblistin
 - [Technologies](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#technologies)
 - [Requirements for Use](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#requirements-for-use)
 - [Tutorial](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#tutorial)
-- UML Diagrams
-- Difficulties:
-    - elements.py
-        - ConfigElements
-    - webscraper.py
-        - GlassdoorWebScraper
-    - Other
-- What I Learned
-- Additional Notes
-- References
-- Author Info
-- Future Notice
-- Credits
-- Thank you!
+- [UML Diagrams](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#uml-diagrams)
+- [Difficulties](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#difficulties):
+    - [elements.py/ConfigEements](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#elementspyconfigelements)
+    - [webscraper.py](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#webscraperpy)
+    - [Other](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#other)
+- [What I Learned](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#what-i-learned)
+- [Additional Notes](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#additional-notes)
+- [References](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#references)
+- [Author Info](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#author-info)
+- [Future Notice](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#future-notice)
+- [Credits](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#credits)
+- [Thank you!](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#thank-you)
 
 ## Motivation
 
