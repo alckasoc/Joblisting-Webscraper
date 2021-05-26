@@ -35,15 +35,15 @@ Inspired by Omer Sakarya's [glassdoor-webscraper-selenium](https://github.com/ar
 
 ## Technologies
 
-re
+re:
 
 I used RegEx for parsing and searching strings. This was helpful for reading in different filter options and scraping data.
 
-time
+time:
 
 Time was for a time.sleep() delay —since internet speed can affect how quickly a page loads and Glassdoor.com has a slightly slow page load up. Successive calls to functions can also be skipped over if the page does not load fast enough.
 
-selenium
+selenium:
 
 I used selenium for this project because it, unlike beautifulsoup4, allows for JavaScript which proved especially helpful in one of the large difficulties of this project.
 
