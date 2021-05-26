@@ -15,7 +15,7 @@ This project allows for configuring joblisting filters and webscraping joblistin
 - [Motivation](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#motivation)
 - [Technologies](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#technologies)
 - [Requirements for Use](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#requirements-for-use)
-- Tutorial
+- [Tutorial](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#tutorial)
 - UML Diagrams
 - Difficulties:
     - elements.py
