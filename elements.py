@@ -8,8 +8,8 @@ from locators import ConfigLocators as CL
 from locators import WebScrapingLocators as WSL
 
 
-CL = ConfigLocators
-WSL = WebScrapingLocators
+# CL = ConfigLocators
+# WSL = WebScrapingLocators
 
 
 class ConfigElements:
