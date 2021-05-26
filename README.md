@@ -182,12 +182,9 @@ Wow, where do I begin! This project definitely encouraged me to learn a lot. Bef
 
 Contact me:
 
-Gmail: tuvincent0106@gmail.com (preferably) or alckasoc@gmail.com
-<br><br/>
-Linkedin (I have not configured my Linkedin profile yet!): [Vincent Tu](https://www.linkedin.com/in/vincent-tu-422b18208/)
-<br><br/>
-Discord: [alckasoc#5261](https://discordapp.com/users/251152357063131138/)
-<br><br/>
+Gmail: tuvincent0106@gmail.com (preferably) or alckasoc@gmail.com\
+Linkedin (I have not configured my Linkedin profile yet!): [Vincent Tu](https://www.linkedin.com/in/vincent-tu-422b18208/)\
+Discord: [alckasoc#5261](https://discordapp.com/users/251152357063131138/)\
 
 ## Future Notice
 
