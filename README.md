@@ -69,10 +69,10 @@ I created my UML diagrams in EdrawMax. Attached is a folder called diagrams. Thi
 - In the case where it does not display this checkbox, the histograms were always out of alignment and did not form a rounded bell curve otherwise it formed a smooth histogram bell curve (refer to Figure 1-1 & 1-2). This issue posed a few interesting features that were later explored and compensated for in code.
 
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary1.PNG?raw=true)
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary1.PNG?raw=true)\
 Figure 1-1. Smooth salary histogram bell curve with a checkbox.
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary2.PNG?raw=true)
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary2.PNG?raw=true)\
 Figure 1-2. Rough salary histogram without a checkbox.
 <br/><br/>
 
@@ -193,7 +193,7 @@ As of now, this project works. However, as joblistings are constantly updated, a
 ## Credits
 
 This project was made with inspiration from:
-https://github.com/arapfaik/scraping-glassdoor-selenium
+https://github.com/arapfaik/scraping-glassdoor-selenium.
 
 ## Thank you!
 
