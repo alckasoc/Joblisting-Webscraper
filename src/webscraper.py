@@ -1,4 +1,5 @@
 
+import re
 import time
 import pandas as pd
 
@@ -339,8 +340,8 @@ class GlassdoorWebScraper(ConfigElements, WebScrapingElements):
         try:
             clear_filter_button = self.get_clear_filter_span()
             clear_filter_button.click()
-        except Exception as e:
-            print(e)
+        except:
+            print("Cannot clear filters.")
     
     
     # Initialize all filter configurations and allows for initializing specific filters.
@@ -460,9 +461,7 @@ class GlassdoorWebScraper(ConfigElements, WebScrapingElements):
                     
                 time.sleep(1)
                 self.init_filters(filter_type)
-            except Exception as e:
-                print(e)
-                print("ENTER EXCEPTION")
+            except:
                 self.init_filters(filter_type)
                 time.sleep(1)
             print(f"Your options for filter {filter_type} are :")
@@ -500,8 +499,8 @@ class GlassdoorWebScraper(ConfigElements, WebScrapingElements):
                 elif not include: pass
             applybutton = self.get_filters_minsalaries_applybutton()
             applybutton.click()
-        except Exception as e:
-            print(e)
+        except:
+            print("Cannot select include data with no salary checkbox.")
     
     
     # Change keyword (occupation).

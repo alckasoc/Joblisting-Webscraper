@@ -1,4 +1,7 @@
 
+import re
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -570,24 +573,13 @@ class ConfigElements:
         # so that the correct salary ranges are displayed.
         salary_filter_applybutton = self.get_filters_minsalaries_applybutton()
         salary_filter_applybutton.click()
-        
-        print("BEFORE RESET")
-        
+                
         time.sleep(1)
         self.reset_salary_slider()
         time.sleep(1)
-        
-        print("AFTER RESET")
-        
+                
         salary_filter = self.get_filters_minsalaries()
         salary_filter.click()
-        
-#         left_slider = self.get_left_slider()
-#         left_slider.click()
-#         left_slider.click()
-#         right_slider = self.get_right_slider()
-#         right_slider.click()
-#         right_slider.click()
         
         # Get all histogram bins into a list.
         histogram_bins = self.get_primary_dropdown_histogram_container_all_div()
@@ -597,9 +589,7 @@ class ConfigElements:
         left_slider.click()
         
         time.sleep(1)
-        
-        print("A")
-        
+                
         all_bins = []
         for idx, _ in enumerate(range(len(histogram_bins) - 1)):
             if not idx:
@@ -621,17 +611,13 @@ class ConfigElements:
             # Move once to the right to update the lower
             # endpoint of the salary range.
             left_slider.send_keys(Keys.ARROW_RIGHT)
-            
-        print("B")
-            
+                        
         # Finally, add the endpointt of the last salary range
         # and close the filter and return all bins for 
         # the left and right slider bins.
         all_bins.append(a_bin[1])
         salary_filter.click()
-        
-        print("C")
-        
+                
         # If [a, b] is the largest possible salary range,
         # then the left slider can access values from
         # index(a) to index(b - 1) and the right slider
@@ -726,22 +712,19 @@ class ConfigElements:
                     
             # Special initialization for is_salary.
             elif is_salary:
-                print("ENTER ELIF")
                 self.filters[name] = {}
                 salary_filter = get_filters_()
                 salary_filter.click()
-                print("CLICKED FILTER")
                 left_slider_bins, right_slider_bins = self.initialize_salary_bins()
                 self.filters[name]["left_slider"] = left_slider_bins
                 self.filters[name]["right_slider"] = right_slider_bins
-                print("INITIALIZED SALARY")
                 
         # Glassdoor.com occassionally might exclude a filter or two 
         # from the "More" dropdown. This except block catches it and 
         # simply prints the exception.
-        except Exception as e:
-            print("init_filter is not working.")
-            print(e)
+        except:
+            print(f"Cannot initialize filter {name}.")
+
         
     
     # Changes a filter option to.
@@ -764,8 +747,8 @@ class ConfigElements:
             
             if is_more:
                 self.click_more_dropdown(n_clicks=2)
-        except Exception as e:
-            print(e)
+        except:
+            print(f"Cannot change filter {name}.")
     
     
     # Initialize the "Most Relevant" dropdown "filter".
