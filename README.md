@@ -3,6 +3,7 @@
 [![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-F3f0f0?&logo=Jupyter&labelColor=F3f0f0)](https://jupyter.org/try)
 [![Python](https://img.shields.io/badge/Python-3.8.3-21455f?logo=python&labelColor=21455f)](https://www.python.org/)
 [![Selenium](https://img.shields.io/badge/Selenium-3.141.0-F3f0f0?logo=selenium&labelColor=F3f0f0)](https://selenium-python.readthedocs.io/)
+[![Pandas](https://img.shields.io/badge/Pandas-1.2.4-F3f0f0?logo=pandas&labelColor=F3f0f0)](https://pandas.pydata.org/pandas-docs/stable/)
 [![Gmail 1](https://img.shields.io/badge/Gmail-tuvincent0106%40gmail.com-F3f0f0?logo=gmail&labelColor=F3f0f0)](https://mail.google.com/mail/?view=cm&fs=1&to=tuvincent0106@gmail.com)
 [![Gmail 2](https://img.shields.io/badge/Gmail-alckasoc%40gmail.com-F3f0f0?logo=gmail&labelColor=F3f0f0)](https://mail.google.com/mail/?view=cm&fs=1&to=tuvincent0106@gmail.com)
 [![Linkedin](https://img.shields.io/badge/Linkedin-Vincent%20Tu-0A66C2?logo=linkedin&labelColor=0A66C2)](https://www.linkedin.com/in/vincent-tu-422b18208)
@@ -47,11 +48,16 @@ selenium:
 
 I used selenium for this project because it, unlike beautifulsoup4, allows for JavaScript which proved especially helpful in one of the large difficulties of this project.
 
+pandas:
+
+I used pandas for creating the dataframe after the job webscraping is done.
+
 ## Requirements for Use
 
 - I used Google Chrome Version 90.0.4430.212 and its corresponding Chromedriver for this project (you can find your Chromedriver [here](https://sites.google.com/a/chromium.org/chromedriver/downloads)). To check Chrome version, navigate to a Google browser and click the upper right three dots > Settings > Help > About Google Chrome.
 - Python ≥ 3.8.3.
 - Selenium ≥ 3.141.0.
+- Pandas ≥ 1.2.4.
 
 ## Tutorial
 
