@@ -817,6 +817,7 @@ class WebScrapingElements:
     - Get Job Info
     
         - get jdcol
+        - get try again button
         - get job info *
             > 1
             > 2
@@ -883,6 +884,12 @@ class WebScrapingElements:
     
     def get_jdcol(self):
         return self.wait_until_element(WSL.JD_COL)
+    
+    
+    def get_try_again_btn(self):
+        jd_col = self.get_jdcol()
+        try_again_div = jd_col.find_element(*WSL.TRY_AGAIN_DIV)
+        return try_again_div.find_element(*WSL.TRY_AGAIN_BTN)
     
     
     def get_jobinfo1(self):

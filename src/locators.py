@@ -120,6 +120,7 @@ class WebScrapingLocators:
         - Joblistings list.
         - Page navigator.
         - Job Description column.
+        - Try again button.
         - Job Info I.
         - Job Info II.
         - Job Info III.
@@ -150,6 +151,10 @@ class WebScrapingLocators:
     
     # Job description column. 
     JD_COL = (By.ID, "JDCol")
+    
+    # Try again button for when a joblisting fails to show.
+    TRY_AGAIN_DIV = (By.CLASS_NAME, "erj00if0")
+    TRY_AGAIN_BTN = (By.TAG_NAME, "button")
     
     # Job Info I (company, rating, headquarters, salary est).
     HEADER = (By.CLASS_NAME, "e14vl8nk0")

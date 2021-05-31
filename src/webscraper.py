@@ -720,119 +720,131 @@ class GlassdoorWebScraper(ConfigElements, WebScrapingElements):
         page_counter = 1
         jobs = []
         
-        while len(jobs) < n_jobs and page_counter <= total_pages:
-            time.sleep(2)
-            
-            joblistings = self.get_joblistings()
+        try:
+            while len(jobs) < n_jobs and page_counter <= total_pages:
+                time.sleep(2)
 
-            for joblisting in joblistings:
+                joblistings = self.get_joblistings()
+
+                for joblisting in joblistings:
+                    if len(jobs) == n_jobs:
+                        break
+
+                    joblisting.click()
+
+                    time.sleep(2)
+
+                    # Check if there is a pop-up.
+                    try:
+                        close_popup_btn = self.close_popup()
+                        close_popup_btn.click()
+                    except:
+                        pass
+
+                    time.sleep(2)
+                    
+                    # Check if there is a "try again" button.
+                    try:
+                        try_again_btn = self.get_try_again_btn()
+                        try_again_btn.click()
+                        time.sleep(2)
+                        break
+                    except:
+                        pass
+                    
+                    jobinfo = {}
+
+                    # Job Info I.
+                    jobinfo1 = self.get_jobinfo1()
+
+                    try:
+                        company = jobinfo1[0].text
+                    except:
+                        company = -1
+                    try:
+                        job_title = jobinfo1[1].text
+                    except:
+                        job_title = -1
+                    try:
+                        headquarters = jobinfo1[2].text
+                    except:
+                        headquarters = -1
+                    try:
+                        salary_estimate = jobinfo1[3].text
+                    except:
+                        salary_estimate = -1
+
+                    jobinfo1_features = {
+                        "company": company,
+                        "job title": job_title,
+                        "headquarters": headquarters,
+                        "salary estimate": salary_estimate
+                    }
+
+                    # Job Info II.
+                    jobinfo2 = self.get_jobinfo2()
+
+                    try:
+                        job_type = jobinfo2[0].text
+                    except:
+                        job_type = -1
+
+                    jobinfo2_features = {
+                        "job type": job_type
+                    }
+
+                    # Job Info III.
+                    try:
+                        jobinfo3 = self.get_jobinfo3()
+                    except:
+                        pass
+
+                    jobinfo3_features = {
+                        "size": -1,
+                        "founded": -1,
+                        "type": -1,
+                        "industry": -1,
+                        "sector": -1,
+                        "revenue": -1
+                    }
+
+                    try:
+                        # The text is a string, split by "\n", it will 
+                        # be a list with every value an attribute and every other
+                        # value corresponding to a value.
+                        jobinfo3_features_updated = {}
+                        features_list = jobinfo3.text.lower().split("\n")
+                        for i in range(0, len(features_list)-1, 2):
+                            jobinfo3_features_updated[features_list[i]] = features_list[i + 1]
+                    except:
+                        pass
+
+                    jobinfo3_features.update(jobinfo3_features_updated)
+
+                    # Job Info IV.
+                    jobinfo4_features = {"job description": self.get_jobinfo4().text}
+
+                    for jobinfo_features in [jobinfo1_features, 
+                                    jobinfo2_features, 
+                                    jobinfo3_features, 
+                                    jobinfo4_features]:
+                        jobinfo.update(jobinfo_features)
+
+                    jobs.append(jobinfo)
+
                 if len(jobs) == n_jobs:
                     break
-                
-                joblisting.click()
 
-                time.sleep(2)
-
-                # Check if there is a pop-up.
+                # Clicks the right arrow in the page navigator footer.
                 try:
-                    close_popup_btn = self.close_popup()
-                    close_popup_btn.click()
+                    page_nav_right_arrow = self.get_page_nav()[6]
+                    page_nav_right_arrow.click()
                 except:
                     pass
 
-                time.sleep(2)
-
-                jobinfo = {}
-
-                # Job Info I.
-                jobinfo1 = self.get_jobinfo1()
-
-                try:
-                    company = jobinfo1[0].text
-                except:
-                    company = -1
-                try:
-                    job_title = jobinfo1[1].text
-                except:
-                    job_title = -1
-                try:
-                    headquarters = jobinfo1[2].text
-                except:
-                    headquarters = -1
-                try:
-                    salary_estimate = jobinfo1[3].text
-                except:
-                    salary_estimate = -1
-
-                jobinfo1_features = {
-                    "company": company,
-                    "job title": job_title,
-                    "headquarters": headquarters,
-                    "salary estimate": salary_estimate
-                }
-
-                # Job Info II.
-                jobinfo2 = self.get_jobinfo2()
-
-                try:
-                    job_type = jobinfo2[0].text
-                except:
-                    job_type = -1
-
-                jobinfo2_features = {
-                    "job type": job_type
-                }
-
-                # Job Info III.
-                try:
-                    jobinfo3 = self.get_jobinfo3()
-                except:
-                    pass
-
-                jobinfo3_features = {
-                    "size": -1,
-                    "founded": -1,
-                    "type": -1,
-                    "industry": -1,
-                    "sector": -1,
-                    "revenue": -1
-                }
-
-                try:
-                    # The text is a string, split by "\n", it will 
-                    # be a list with every value an attribute and every other
-                    # value corresponding to a value.
-                    jobinfo3_features_updated = {}
-                    features_list = jobinfo3.text.lower().split("\n")
-                    for i in range(0, len(features_list)-1, 2):
-                        jobinfo3_features_updated[features_list[i]] = features_list[i + 1]
-                except:
-                    pass
-
-                jobinfo3_features.update(jobinfo3_features_updated)
-
-                # Job Info IV.
-                jobinfo4_features = {"job description": self.get_jobinfo4().text}
-
-                for jobinfo_features in [jobinfo1_features, 
-                                jobinfo2_features, 
-                                jobinfo3_features, 
-                                jobinfo4_features]:
-                    jobinfo.update(jobinfo_features)
-
-                jobs.append(jobinfo)
+                page_counter += 1
             
-            if len(jobs) == n_jobs:
-                break
-            
-            # Clicks the right arrow in the page navigator footer.
-            try:
-                page_nav_right_arrow = self.get_page_nav()[6]
-                page_nav_right_arrow.click()
-            except:
-                pass
-            
-            page_counter += 1
-            
+        except:
+            return pd.DataFrame(jobs)
         return pd.DataFrame(jobs)
     
