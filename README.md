@@ -14,6 +14,7 @@ This project allows for configuring joblisting filters and webscraping joblistin
 
 ## Table of Contents:
 - [Motivation](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#motivation)
+- [Structure](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#structure)
 - [Technologies](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#technologies)
 - [Requirements for Use](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#requirements-for-use)
 - [Tutorial](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/README.md#tutorial)
@@ -33,6 +34,17 @@ This project allows for configuring joblisting filters and webscraping joblistin
 ## Motivation
 
 Inspired by Omer Sakarya's [glassdoor-webscraper-selenium](https://github.com/arapfaik/scraping-glassdoor-selenium) project and aiming to create a data science project from end to end, I took the opportunity to explore the webscraping world and create a project. I found webscraping joblistings from Glassdoor.com to be valuable for a wealth of applications: quickly generating real-life applicable data, the generated data can be wrangled with and explored through exploratory data analysis (EDA). Additionally, it could have the potential of helping future employers and job seekers discover demographics previously hidden (I hope).
+
+## Structure
+
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/pipeline_diagram.PNG?raw=true)\
+Figure 1. Data science lifecycle. 
+<br/><br/>
+
+This project is part of a *larger* project! This is only 1 step in that larger project. To check out the other projects in this series:
+1. [Joblisting-Webscraper](https://github.com/alckasoc/Joblisting-Webscraper)
+2. [Joblisting-EDA](https://github.com/alckasoc/Joblisting-EDA)
+3. More to come!
 
 ## Technologies
 
