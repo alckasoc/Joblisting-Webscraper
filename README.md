@@ -1,4 +1,4 @@
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/banner.png?raw=true)
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/banner.png?raw=true)
 
 [![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-F3f0f0?&logo=Jupyter&labelColor=F3f0f0)](https://jupyter.org/try)
 [![Python](https://img.shields.io/badge/Python-3.8.3-21455f?logo=python&labelColor=21455f)](https://www.python.org/)
@@ -37,7 +37,7 @@ Inspired by Omer Sakarya's [glassdoor-webscraper-selenium](https://github.com/ar
 
 ## Structure
 
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/pipeline_diagram.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/pipeline_diagram.PNG?raw=true)\
 Figure 1. Data science lifecycle. 
 <br/><br/>
 
@@ -87,37 +87,37 @@ I created my UML diagrams in EdrawMax. Attached is a folder called diagrams. Thi
 - In the case where it does not display this checkbox, the histograms were always out of alignment and did not form a rounded bell curve otherwise it formed a smooth histogram bell curve (refer to Figure 1-1 & 1-2). This issue posed a few interesting features that were later explored and compensated for in code.
 
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary1.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary1.PNG?raw=true)\
 Figure 1-1. Smooth salary histogram bell curve with a checkbox.
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary2.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary2.PNG?raw=true)\
 Figure 1-2. Rough salary histogram without a checkbox.
 <br/><br/>
 
 - In both cases where the checkbox is present and absent, moving the left slider immediately to the right would send it to the absolute farthest right and the same goes for moving the right slider immediately to the left (actually, in some cases this would happen and in some other cases it wouldn't). Refer to Figure 1-3. I solved this by moving these sliders before any computation was executed on them (move the left slider left first before moving right and the right slider right first before moving left). P.S. This also solved another issue where the salary range in the header doesn't match the actual salary range the histogram displays. Refer to figure 1-3.5.
 
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary3.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary3.PNG?raw=true)\
 Figure 1-3. Slider movement.
 <br/><br/>
 
 - In another issue, the bell curve shown in Figure 1-1 could be reset (the default is 18k to 404k and this default salary range would vary slightly every now and then when the page is loaded —granted it is not the curve shown in Figure 1-2) In contrast, the rough salary histogram in Figure 1-2 could not be reset (reset as in moving the sliders back to the original positions, which means moving the left slider to the far left and the right slider to the far right). Refer to Figure 1-4 & 1-5. I solved this issue by simply forcing a clear_filters() when initializing Figure 1-2 and by resetting the salary slider for Figure 1-1. Alternatively, I could've  simply clear_filters() however this would erase all filters, and I wanted extra functionality for editing the salary filter in the case where it can be edited separately.
 
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary4.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary4.PNG?raw=true)\
 Figure 1-4. Resetting the salary ranges. Notice how I can reset this by simply dragging the left and right sliders to the far left and right, respectively. 
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary5.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary5.PNG?raw=true)\
 Figure 1-5. Resetting the salary ranges. Notice how I set a salary range and this new salary range becomes the endpoints.
 <br/><br/>
 
 - The "More" dropdown randomly omits, by chance on page load up, the "All City" filter and a few other filters like "All Seniority Labels". This difficulty was solved with a try and except block that would constantly update the self.filters() attribute to keep the most up-to-date filters and filter options.
 
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary6.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary6.PNG?raw=true)\
 Figure 1-6. Notice all the "More" dropdowns.
 <br/><br/>
-![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/images/salary7.PNG?raw=true)\
+![](https://github.com/alckasoc/Joblisting-Webscraper/blob/main/img/salary7.PNG?raw=true)\
 Figure 1-7. Notice how this dropdown is missing "All Job Functions" and "All Seniority Labels".
 <br/><br/>
 
