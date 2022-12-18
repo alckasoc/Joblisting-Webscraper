@@ -44,7 +44,8 @@ Figure 1. Data science lifecycle.
 This project is part of a *larger* project! This is only 1 step in that larger project. To check out the other projects in this series:
 1. [Joblisting-Webscraper](https://github.com/alckasoc/Joblisting-Webscraper)
 2. [Joblisting-EDA](https://github.com/alckasoc/Joblisting-EDA)
-3. More to come!
+3. [Joblisting-Modeling](https://github.com/alckasoc/Joblisting-Modeling)
+4. More to come!
 
 ## Technologies
 
